@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="index.bundle.js" defer></script>
+  <script type="module" src="experiment.bundle.js" defer></script>
+</head>
+
+<body>
+  <form novalidate id="newForm" action="submit">
+    <input required type="text">
+    <input required type="email" customError="Введите правильный email" name="email">
+    <input required minlength="4" type="password" name="password">
+    <button form="newForm">submit</button>
+  </form>
+</body>
+
+</html>
