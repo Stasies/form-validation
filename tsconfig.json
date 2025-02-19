@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "declaration": true,             // Generate .d.ts files
+    "declarationDir": "dist",  // Output directory for types
+    "emitDeclarationOnly": true,     // Only generate declaration files
+    "allowJs": true,                 // Allow JavaScript files
+    "outDir": "dist",                // Output directory
+    "module": "ESNext",
+    "target": "ES6",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*"]
+}

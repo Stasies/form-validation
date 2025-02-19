@@ -1,29 +1,18 @@
 const path = require("path");
 
 module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: ["node_modules"],
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"], // Compile modern JS
-          },
-        },
-      },
-    ],
-  },
   entry: {
     index: "./src/index.js",
-    experiment: "./src/experiment.js",
   },
+  target: "web",
   output: {
-    filename: "[name].bundle.js",
+    filename: "index.js",
     path: path.resolve(__dirname, "dist"),
+    library: "validateForm",
+    libraryTarget: "umd",
+    globalObject: "this",
+    umdNamedDefine: true,
   },
-  mode: "development",
   devServer: {
     static: path.resolve(__dirname, "src"), // Serve files from the src directory
     hot: true, // Enable hot reloading

@@ -77,6 +77,7 @@ class FormValidator {
   init() {
     this.setupEventListeners();
     this.setStyles();
+    this.form.setAttribute("novalidate", true);
   }
   setStyles() {
     if (document.querySelector("#form-validator-styles")) return;
@@ -201,7 +202,9 @@ const validateFormComponent = function (form) {
   }
 };
 
-export const validateForm = (form, options) => {
+const validateForm = (form, options = {}) => {
   validateFormComponent(form);
   return new FormValidator(form, options);
 };
+
+export { validateForm };
